@@ -5620,7 +5620,7 @@
             function togglePath() {
                 let rnd = Math.floor(Math.random() * paths.length);
                 /*             paths[rnd].parentElemeclassList.toggle("hidden"); */ // initial approach but this doesn't exactly do what it is supposed to do. there are some M's hidden by default, we need to catch those as well
-                paths[rnd].parentElement.parentElement.parentElement.style.opacity = `${Math.floor(Math.random() * 2)}`; // back to my first janky iteration of getting certain parent elements, originally tried last Wednesday
+                paths[rnd].parentElement.parentElement.parentElement.style.opacity = paths[rnd].parentElement.parentElement.parentElement.style.opacity ? "1" : "0"; //`${Math.floor(Math.random() * 2)}`; // back to my first janky iteration of getting certain parent elements, originally tried last Wednesday
             }
             setInterval(togglePath, 50)
         }
