@@ -208,7 +208,7 @@ h4 {
     font-size: 13px;
     line-height: 16px;
 }
-.info > img:first-of-type {
+.info > a:first-of-type {
     margin-right: auto;
 }
 aside {
