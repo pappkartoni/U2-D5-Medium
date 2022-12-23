@@ -238,6 +238,7 @@ footer {
 footer > a {
     color: var(--color-lighter);
     line-height: 20px;
+    font-size: 14px;
 }
 
 .btn {
