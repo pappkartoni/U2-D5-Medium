@@ -292,7 +292,7 @@ footer > a {
     line-height: 20px;
 }
 g {
-    transition: opacity 100ms linear;
+    transition: opacity 50ms linear;
 }
 .hidden {
     opacity: 0;

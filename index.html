@@ -5605,24 +5605,27 @@
         </div>
     </section>
     <script>
-        window.addEventListener("scroll", function() {
-            if(window.scrollY > 360) {
-                document.querySelector("header").classList.add("tf-white");
-                document.querySelector("header button").classList.add("btn-alt");
-            } else {
-                document.querySelector("header").classList.remove("tf-white");
-                document.querySelector("header button").classList.remove("btn-alt");
+        function execScript() {
+            window.addEventListener("scroll", function() {
+                if(window.scrollY > 360) { // should be 454 imo
+                    document.querySelector("header").classList.add("tf-white");
+                    document.querySelector("header button").classList.add("btn-alt");
+                } else {
+                    document.querySelector("header").classList.remove("tf-white");
+                    document.querySelector("header button").classList.remove("btn-alt");
+                }
+            });
+            
+            let paths = document.querySelectorAll("path");
+            function togglePath() {
+                let rnd = Math.floor(Math.random() * paths.length);
+                /*             paths[rnd].parentElemeclassList.toggle("hidden"); */ // initial approach but this doesn't exactly do what it is supposed to do. there are some M's hidden by default, we need to catch those as well
+                paths[rnd].parentElement.parentElement.parentElement.style.opacity = `${Math.floor(Math.random() * 2)}`; // back to my first janky iteration of getting certain parent elements, originally tried last Wednesday
             }
-        });
-        
-        let paths = document.querySelectorAll("path");
-        function togglePath() {
-            let rnd = Math.floor(Math.random() * paths.length);
-            /*             paths[rnd].parentElemeclassList.toggle("hidden"); */ // initial approach but this doesn't exactly do what it is supposed to do. there are some M's hidden by default, we need to catch those as well
-            paths[rnd].parentElement.parentElement.parentElement.style.opacity = `${Math.floor(Math.random() * 2)}`; // back to my first janky iteration of getting certain parent elements, originally tried last Wednesday
+            setInterval(togglePath, 50)
         }
-        setInterval(togglePath, 50)
-        </script>
+        window.addEventListener("DOMContentLoaded", execScript);
+    </script>
 </body>
 
 </html>
