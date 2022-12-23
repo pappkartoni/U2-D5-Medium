@@ -60,6 +60,7 @@ nav {
 nav > a {
     margin-right: 25px;
     font-size: 14px;
+    line-height: 15px;
 }
 
 .trending, .main-body-wrapper, .header-wrapper, .hero-wrapper {
