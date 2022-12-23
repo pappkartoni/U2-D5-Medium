@@ -59,7 +59,9 @@ nav {
 }
 nav > a {
     margin-right: 25px;
+    font-size: 14px;
 }
+nav > button
 .trending, .main-body-wrapper, .header-wrapper, .hero-wrapper {
     max-width: 1192px;
     margin-inline: auto;
