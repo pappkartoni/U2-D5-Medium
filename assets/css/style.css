@@ -276,6 +276,9 @@ footer > a {
     background-color: #1A8917;
     border: 1px solid #1A8917;
 }
+.btn-alt:hover {
+    background-color: #156912;
+}
 .btn-large {
     width: 213px;
     font-size: 20px;
